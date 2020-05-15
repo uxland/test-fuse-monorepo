@@ -1,0 +1,36 @@
+{
+  "name": "@test-fuse-monorepo/products",
+  "version": "2.0.0",
+  "description": "Products",
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/test-fuse-monorepo/tree/master/packages/products#readme",
+  "license": "UNLICENSED",
+  "main": "lib/index",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/test-fuse-monorepo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/test-fuse-monorepo/issues"
+  },
+  "dependencies": {
+    "@test-fuse-monorepo/core": "^0.0.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@uxland/uxl-prism": "^3.6.13",
+    "@uxland/uxl-regions": "^3.3.9",
+    "lit-element": "^2.3.1"
+  }
+}

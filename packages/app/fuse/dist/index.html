@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Validació visites</title>
+    <!--     <meta name="theme-color" content="#EBEBE3" />
+    <link rel="icon" type="image/png" href="./images/favicon.ico" />
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" /> -->
+
+    <!-- <script src="<%= htmlWebpackPlugin.options.paths.settings %>"></script> -->
+    <!-- <link rel="icon" href="/src/theme/images/cropped-favicon-32x32.png" sizes="32x32" /> -->
+    <!-- <link rel="icon" href="/src/theme/images/cropped-favicon-192x192.png" sizes="192x192" /> -->
+    <!-- <link rel="import" href="../node_modules/@webcomponents/shadycss/apply-shim.html" /> -->
+    <!-- <link rel="import" href="../node_modules/@polymer/polymer/lib/elements/custom-style.js" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
+    <!--     <link rel="manifest" href="./manifest.webmanifest" /> -->
+    
+    <script>
+      if (!window['process']) window['process'] = { env: { NODE_ENV: 'production' } };
+      window.uxlPrism = window.uxlPrism || { settings: {} };
+      window.uxlPrism.settings = Object.assign({}, window.uxlPrism.settings, {});
+
+      /* document.addEventListener(
+                'WebComponentsReady',
+                function componentsReady() {
+                    document.removeEventListener('WebComponentsReady', componentsReady, false);
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.src = '<%= htmlWebpackPlugin.files.chunks["main"].entry %>';
+                    var refScript = document.body.getElementsByTagName('script')[0];
+                    refScript.parentNode.insertBefore(script, refScript);
+                },
+                false
+            ); */
+    </script>
+  </head>
+  <custom-style>
+    <style>
+      html {
+        font-size: 14px;
+      }
+
+      html input {
+        padding: 0;
+      }
+
+      body {
+        margin: 0;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+      }
+    </style>
+  </custom-style>
+  <body>
+    <noscript>
+      <h1>Please enable Javascript</h1>
+    </noscript>
+    <!-- <script defer src="<%= htmlWebpackPlugin.options.paths.webcomponents %>"></script> -->
+    <script type="text/javascript" src="/app.js"></script>
+<script type="text/javascript" src="/vendor.js"></script>
+    <script>
+      let deferredPrompt;
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        console.log('beforeinstallprompt');
+        var button = document.querySelector('button');
+        button.removeAttribute('hidden');
+        button.addEventListener('click', () => {
+          event.prompt();
+          button.setAttribute('disabled', true);
+        });
+      });
+    </script>
+  </body>
+</html>

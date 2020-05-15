@@ -1,0 +1,13 @@
+:host {
+  min-width: 1px;
+  width: 100%;
+  min-height: inherit;
+  height: auto;
+}
+
+.list {
+  @include layout-vertical;
+  @include layout-flex;
+  padding: 0 20px;
+  background-color: $primary-color;
+}
