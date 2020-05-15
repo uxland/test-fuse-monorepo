@@ -1,0 +1,28 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.20.2",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "uglify-es": "^3.3.9"
+  },
+  "scripts": {
+    "build": "lerna run build:local --scope @test-fuse-monorepo/app --stream",
+    "deploy:pro": "lerna run build:pro --scope @test-fuse-monorepo/app --stream && npx ncp packages/app/public public",
+    "serve": "lerna run serve --scope @test-fuse-monorepo/app --stream",
+    "setup": "lerna bootstrap",
+    "deps:clean:packages": "rimraf packages/*/node_modules",
+    "deps:clean:core": "rimraf node_modules yarn.lock",
+    "deps:clean": "npm-run-all --parallel deps:clean:packages deps:clean:core"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "fuse-box": "^4.0.0-next.432",
+    "node-sass": "^4.14.1",
+    "ts-node": "^8.10.1"
+  }
+}

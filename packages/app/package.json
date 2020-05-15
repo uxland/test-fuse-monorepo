@@ -1,0 +1,60 @@
+{
+  "name": "@test-fuse-monorepo/app",
+  "version": "0.0.1",
+  "description": "Test fuse monorepo",
+  "keywords": [],
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/test-fuse-monorepo/tree/master/packages/app#readme",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/test-fuse-monorepo.git"
+  },
+  "scripts": {
+    "serve": "node --experimental-worker fuse/start.js",
+    "serve:build": "http-server"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/test-fuse-monorepo/issues"
+  },
+  "dependencies": {
+    "@test-fuse-monorepo/core": "^0.0.1",
+    "@uxland/uxl-prism": "^3.6.1",
+    "@uxland/uxl-redux": "^3.0.9",
+    "@uxland/lit-redux-connect": "^1.1.1",
+    "@uxland/style-utilities": "^1.0.0-alpha.7",
+    "@uxland/uxl-content-switcher": "^3.0.3",
+    "@uxland/uxl-localization": "^3.0.1",
+    "@uxland/uxl-utilities": "^3.3.10",
+    "@uxland/functional-utilities": "^1.0.0-alpha.8",
+    "@webcomponents/webcomponentsjs": "^2.4.3",
+    "lit-element": "^2.3.1",
+    "ramda": "^0.26.0",
+    "@polymer/app-layout": "^3.1.0",
+    "@polymer/paper-button": "^3.0.1",
+    "@polymer/paper-icon-button": "^3.0.2",
+    "@vaadin/vaadin-radio-button": "1.4.0-alpha1",
+    "date-fns": "^2.13.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "babel-loader": "^8.0.6",
+    "http-server": "^0.12.1",
+    "node-sass": "^4.13.1",
+    "typescript": "^3.8.3"
+  }
+}

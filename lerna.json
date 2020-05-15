@@ -1,0 +1,20 @@
+{
+    "packages": ["packages/*"],
+    "version": "independent",
+    "npmClient": "yarn",
+    "useWorkspaces": true,
+    "ignoreChanges": ["argos/*/test/**", "backend/*/test/**", "professional-portal/*/test/**", "**/*.md", "**/*.mdx"],
+    "command": {
+        "create": {
+            "license": "UNLICENSED"
+        },
+        "bootstrap": {},
+        "version": {
+            "allowBranch": ["master", "alpha", "beta"],
+            "message": "chore(release): publish new versions"
+        },
+        "publish": {
+            "conventionalCommits": true
+        }
+    }
+}

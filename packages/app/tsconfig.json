@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./lib"
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*.ts", "node_modules"],
+  "references": [
+    {
+      "path": "../core"
+    }
+  ]
+}

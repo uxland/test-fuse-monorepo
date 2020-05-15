@@ -1,0 +1,173 @@
+// App colors
+$primary-color: #e46860;
+$primary-light-color: #3e6db1;
+$secondary-color: #f5f5f0;
+$secondary-light-color: #3485d2;
+$tertiary-color: #5479a5;
+$accent-color: #f4be2d;
+$teal-color: #2bac76;
+$teal-light-color: #78caa7;
+$teal-dark-color: #1c6e4c;
+$primary-font: 'Open Sans';
+$red-color: #f76c5e;
+$green-color: #44af69;
+$orange-color: #fcab10;
+$drawer-font-color: #575757;
+$icon-color: #5f6368;
+$font-color: white;
+$border-color: #eceff1;
+$background-color: #f5f6fa;
+
+// Font Weight
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// Layout
+
+$app-toolbar-height: 56px;
+$app-toolbar-desktop-height: 88px;
+
+:host {
+  --primary-color: #{$primary-color};
+  --primary-light-color: #{$primary-light-color};
+  --secondary-color: #{$secondary-color};
+  --app-toolbar-height: #{$app-toolbar-height};
+  @include tablet {
+    --app-toolbar-height: #{$app-toolbar-desktop-height};
+  }
+  --padding-base: #{calc(var(--window-inner-height) / 100)};
+}
+
+@mixin ics-primary-icon-button {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 50%;
+  --iron-icon-fill-color: #{$icon-color};
+  transition: all 0.2s;
+  &:hover {
+    background-color: #2021240a;
+  }
+}
+
+@mixin text-wrap($font-size, $line-height, $lines-to-show) {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: calc(#{$font-size}*#{$line-height}*#{$lines-to-show}); /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin scrollbar-white {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(256, 256, 256, 0.8) !important;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #ffffff !important;
+    border-radius: 10px;
+  }
+}
+
+@mixin scrollbar-blue-grey {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #b0bec5;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(#546e7a, 0.7) !important;
+    border-radius: 10px;
+  }
+}
+
+@mixin scrollbar-grey {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #c7c7c7;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #546e7a !important;
+    border-radius: 10px;
+  }
+}
+
+@mixin scrollbar-widget {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #cfd8dc;
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(#546e7a, 0.7) !important;
+    border-radius: 10px;
+  }
+}
+
+@mixin action-shadow-box {
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+:host-context(confirm-component) {
+  --uxl-interaction-icon-color: #ffffff;
+  --uxl-interaction-header-background-color: #{$primary-color} !important;
+  --uxl-interaction-accept-button-color: #{$primary-color} !important;
+}
+
+:host-context(notify-component) {
+  --uxl-interaction-notify-padding: 0 16px 0 24px;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  background: rgba($color, $opacity);
+}

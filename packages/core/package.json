@@ -1,0 +1,41 @@
+{
+    "name": "@test-fuse-monorepo/core",
+    "version": "0.0.1",
+    "description": "Test fuse mono repo core",
+    "keywords": [],
+    "author": "UXLand <dev@uxland.es>",
+    "homepage": "https://github.com/uxland/test-fuse-monorepo/tree/master/packages/core#readme",
+    "license": "UNLICENSED",
+    "main": "lib/index",
+    "module": "es/index.js",
+    "types": "lib/index.d.ts",
+    "files": [
+        "lib",
+        "es",
+        "dist"
+    ],
+    "publishConfig": {
+        "registry": "http://registry.npmjs.org/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uxland/test-fuse-monorepo.git"
+    },
+    "scripts": {
+        "build:local": "npx ncp .env.local .env && webpack --env.NODE_ENV=production --optimize-minimize --progress",
+        "build:conso": "npx ncp .env.conso .env && webpack --env.NODE_ENV=production --optimize-minimize --progress",
+        "build:pre": "npx ncp .env.pre .env && webpack --env.NODE_ENV=production --optimize-minimize --progress",
+        "build:pro": "npx ncp .env.pro .env && webpack --env.NODE_ENV=production --optimize-minimize --progress",
+        "serve": "webpack-dev-server --hot --inline --display-error-details --progress --content-base demo/",
+        "serve:build": "http-server"
+    },
+    "bugs": {
+        "url": "https://github.com/uxland/test-fuse-monorepo/issues"
+    },
+    "dependencies": {
+        "@uxland/uxl-prism": "^3.6.1",
+        "lit-element": "^2.2.0",
+        "ramda": "^0.27.0",
+        "@uxland/uxl-redux": "^3.0.9"
+    }
+}

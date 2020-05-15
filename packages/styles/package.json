@@ -1,0 +1,39 @@
+{
+  "name": "@test-fuse-monorepo/styles",
+  "version": "0.0.1",
+  "description": "ICS SMS Patient - styles",
+  "keywords": [],
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/test-fuse-monorepo/tree/master/packages/styles#readme",
+  "license": "UNLICENSED",
+  "main": "lib/index",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "test-fuse-monorepo.scss",
+    "theme-styles.scss",
+    "es",
+    "lib",
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/test-fuse-monorepo.git"
+  },
+  "scripts": {},
+  "bugs": {
+    "url": "https://github.com/uxland/test-fuse-monorepo/issues"
+  },
+  "dependencies": {
+    "@polymer/iron-icons": "^3.0.1",
+    "@polymer/paper-icon-button": "^3.0.2",
+    "@polymer/polymer": "^3.3.1",
+    "@uxland/style-utilities": "^1.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
