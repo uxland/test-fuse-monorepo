@@ -1,5 +1,5 @@
-import { AppointmentsValidationApp } from './src/components/app/view';
+import { TestFuseMonorepoApp } from './src/components/app/view';
 
 console.log(`ICS SMS Patient v${process.env.appVersion}`);
-const app = new AppointmentsValidationApp();
+const app = new TestFuseMonorepoApp();
 document.body.appendChild(app as any);

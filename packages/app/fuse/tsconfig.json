@@ -1,9 +1,4 @@
 {
-  "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "ESNext",
-    "module": "CommonJS",
-    "allowJs": true
-  },
+  "extends": "../tsconfig.json",
   "include": ["*.ts", "node_modules"]
 }

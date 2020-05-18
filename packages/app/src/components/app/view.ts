@@ -1,7 +1,7 @@
 import { TestFuseMonorepoAppBase } from '@test-fuse-monorepo/core';
 import { BootstrapOptions, setLanguage, setLocales } from '@uxland/uxl-prism';
 import { css, CSSResult, customElement, html, property, TemplateResult, unsafeCSS } from 'lit-element';
-import { locales } from '../../../locales';
+import { locales } from '../../locales';
 //@ts-ignore
 import styles from './styles.scss';
 import { template } from './template';

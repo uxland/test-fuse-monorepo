@@ -19,8 +19,9 @@
     "lib": ["es2018", "dom"],
     "baseUrl": ".",
     "paths": {
-      "tslib": ["node_modules/tslib/tslib.d.ts"],
-      "@uxland/*": ["node_modules/@uxland/*/lib"]
+      "tslib": ["node_modules/tslib/tslib"],
+      "@uxland/*": ["node_modules/@uxland/*/lib"],
+      "@test-fuse-monorepo/*": ["./pacakges/*/src"]
     }
   }
 }

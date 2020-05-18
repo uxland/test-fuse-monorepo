@@ -1,5 +1,5 @@
 {
-    "compilerOptions": { "rootDir": "./src", "outDir": "./lib", "composite": true, "noEmit": false },
+    "compilerOptions": { "rootDir": "./src", "outDir": "./lib", "composite": true},
     "extends": "../../tsconfig.json",
     "include": ["src/**/*.ts"]
 }
