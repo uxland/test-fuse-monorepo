@@ -22,7 +22,8 @@
     "url": "git+https://github.com/uxland/test-fuse-monorepo.git"
   },
   "scripts": {
-    "serve": "node --experimental-worker fuse/start.js",
+    "move:settings": "npx rimraf fuse/dist && mkdir fuse/dist && npx ncp settings.js fuse/dist/settings.js  ",
+    "serve": "lerna run move:settings && node --experimental-worker fuse/start.js",
     "serve:build": "http-server"
   },
   "bugs": {
