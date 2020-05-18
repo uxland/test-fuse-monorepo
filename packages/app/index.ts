@@ -1,5 +1,5 @@
-import { TestFuseMonorepoApp } from './src/components/app/view';
+import { TestFuseApp } from './src/components/app/view';
+console.log('App initialized');
 
-console.log(`ICS SMS Patient v${process.env.appVersion}`);
-const app = new TestFuseMonorepoApp();
+const app = new TestFuseApp();
 document.body.appendChild(app as any);
