@@ -19,7 +19,10 @@ const fuse = fusebox({
     root: [workspaceRoot],
   },
   stylesheet: {
+    ignoreAllExternal: true,
+    include:["tslib"],
     paths: [resolve('./', '../../styles')],
+    cache: false,
    // autoImport: [{ file: '../../styles/ics-appointments-validation.scss' }],
   },
   webIndex: { template: '../index.html' },

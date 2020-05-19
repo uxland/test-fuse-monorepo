@@ -23,7 +23,7 @@
   },
   "scripts": {
     "move:settings": "npx rimraf fuse/dist && mkdir fuse/dist && npx ncp settings.js fuse/dist/settings.js  ",
-    "serve": "lerna run move:settings && node --experimental-worker fuse/start.js",
+    "serve": "node --experimental-worker fuse/start.js",
     "serve:build": "http-server"
   },
   "bugs": {
@@ -41,7 +41,7 @@
     "@uxland/functional-utilities": "^1.0.0-alpha.8",
     "@webcomponents/webcomponentsjs": "^2.4.3",
     "lit-element": "^2.3.1",
-    "ramda": "^0.26.0",
+    "ramda": "^0.27.0",
     "@polymer/app-layout": "^3.1.0",
     "@polymer/paper-button": "^3.0.1",
     "@polymer/paper-icon-button": "^3.0.2",

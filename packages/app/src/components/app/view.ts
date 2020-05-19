@@ -6,6 +6,7 @@ import { locales } from '../../locales';
 import styles from './styles.scss';
 import { template } from './template';
 
+// @ts-ignore
 @customElement('test-fuse-app')
 export class TestFuseApp extends TestFuseAppBase {
   currentView: string;
@@ -13,6 +14,7 @@ export class TestFuseApp extends TestFuseAppBase {
   constructor() {
     super();
     super.initializeReducers();
+    // @ts-ignore
     this.options = { ...this.options, locales };
   }
 

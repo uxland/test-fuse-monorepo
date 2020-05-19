@@ -7,6 +7,7 @@ import { regions } from '@test-fuse-monorepo/core';
 const registerViews = (): void => {
   regionManager.registerViewWithRegion(regions.main, 'products-list', {
     htmlTag: 'products-list',
+    isDefault: true
   });
 };
 
