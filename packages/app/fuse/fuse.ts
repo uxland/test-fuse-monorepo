@@ -20,11 +20,11 @@ const fuse = fusebox({
   },
   stylesheet: {
     ignoreAllExternal: true,
-    include:["tslib"],
-    paths: [resolve('./', '../../styles')],
+    include: ['tslib'],
     cache: false,
-   // autoImport: [{ file: '../../styles/ics-appointments-validation.scss' }],
+    autoImport: [{ file: '../../styles/test-fuse-monorepo.scss', capture: 'packages' }],
   },
+  plugins: [pluginSass('components/*.scss', { asText: true, useDefault: true })],
   webIndex: { template: '../index.html' },
 });
 
