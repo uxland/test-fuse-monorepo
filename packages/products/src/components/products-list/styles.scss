@@ -8,6 +8,24 @@
 .list {
   @include layout-vertical;
   @include layout-flex;
-  padding: 0 20px;
-  background-color: $primary-color;
+  padding: 36px;
+  height: 100vh;
+
+  .title {
+    font-size: $uxl-units-size-16;
+    font-weight: 500;
+    margin: 24px 0;
+  }
+
+  span {
+    background-color: rgb(201, 201, 201);
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    width: fit-content;
+  }
+
+  vaadin-combo-box {
+    width: fit-content;
+  }
 }

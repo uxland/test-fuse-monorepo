@@ -27,10 +27,13 @@
     "url": "https://github.com/uxland/test-fuse-monorepo/issues"
   },
   "dependencies": {
-    "@test-fuse-monorepo/core": "^0.0.1",
     "@polymer/paper-button": "^3.0.1",
+    "@test-fuse-monorepo/core": "^0.0.1",
+    "@uxland/uxl-interaction": "^3.0.9",
     "@uxland/uxl-prism": "^3.6.13",
     "@uxland/uxl-regions": "^3.3.9",
-    "lit-element": "^2.3.1"
+    "@vaadin/vaadin-combo-box": "^5.1.0",
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1"
   }
 }
